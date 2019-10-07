@@ -89,7 +89,7 @@ app.get('/api/recipes/:id', (req, res, next) => {
 
 
   app.delete('/api/recipes/:id', (req, res, next) => {
-    Thing.deleteOne({_id: req.params.id}).then(
+        Recipe.deleteOne({_id: req.params.id}).then(
       () => {
         res.status(200).json({
           message: 'Deleted!'
